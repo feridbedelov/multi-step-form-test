@@ -30,7 +30,7 @@ export function Confirmation({ handlePrevStep }: Props) {
   } = getValues();
 
   const renderDetails = (key: string, value: string) => (
-    <div className={classes.detailsRow}>
+    <div className={classes.detailsRow} data-testid={key}>
       <Typography fontWeight={600}>{key}: </Typography>
       <Typography>{value}</Typography>
     </div>

@@ -1,6 +1,7 @@
 import { deliveryCarrierOptions, deliveryTypeOptions } from './constants';
+import { FormContextType } from './types';
 
-export const defaultFormValues = {
+export const defaultFormValues: FormContextType = {
   firstName: '',
   lastName: '',
   email: '',
@@ -13,6 +14,6 @@ export const defaultFormValues = {
   deliveredCity: '',
   accountHolderName: '',
   accountNumber: '',
-  accountExpirationDate: '',
+  accountExpirationDate: null,
   accountSecurityCode: '',
 };

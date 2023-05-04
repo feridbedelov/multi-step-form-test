@@ -5,6 +5,7 @@ import { Confirmation } from './components/Confirmation';
 import { DeliveryOptions } from './components/DeliveryOptions';
 import { PaymentOptions } from './components/PaymentOptions';
 import { PersonalInformation } from './components/PersonalInfo';
+import { formStepLabels } from './components/utils/constants';
 import { FormStepEnum } from './components/utils/enums';
 import classes from './styles.module.scss';
 import { useMultiStepForm } from './useMultiStepForm';
@@ -45,14 +46,12 @@ export function MultiStepForm() {
   return (
     <div className={classes.formContainer}>
       <div className={classes.stepperContainer}>
-        <Stepper activeStep={step} alternativeLabel>
-          {Object.keys(FormStepEnum)
-            .filter((k) => isNaN(Number(k)))
-            .map((key) => (
-              <Step key={key}>
-                <StepLabel>{key}</StepLabel>
-              </Step>
-            ))}
+        <Stepper activeStep={step} alternativeLabel data-testid="stepper-container">
+          {formStepLabels.map((key) => (
+            <Step key={key}>
+              <StepLabel>{key}</StepLabel>
+            </Step>
+          ))}
         </Stepper>
       </div>
 

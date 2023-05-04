@@ -9,7 +9,7 @@ export function Layout({ children }: { children: ReactNode }) {
 
 export function LayoutTitle({ children }: { children: ReactNode }) {
   return (
-    <Typography variant="h4" align="center">
+    <Typography variant="h4" align="center" data-testid="step-title">
       {children}
     </Typography>
   );

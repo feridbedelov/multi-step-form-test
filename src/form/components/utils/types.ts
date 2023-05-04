@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 export interface FormContextType {
   firstName: string;
   lastName: string;
@@ -11,6 +13,6 @@ export interface FormContextType {
   deliveredCity: string;
   accountHolderName: string;
   accountNumber: string;
-  accountExpirationDate: string;
+  accountExpirationDate: dayjs.Dayjs | null;
   accountSecurityCode: string;
 }
