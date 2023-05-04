@@ -1,0 +1,17 @@
+.layoutContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 384px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 420px) {
+    width: 300px;
+  }
+}
+
+.actions{
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}

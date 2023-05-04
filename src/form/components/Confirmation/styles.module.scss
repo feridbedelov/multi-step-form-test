@@ -1,0 +1,37 @@
+.confirmationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  
+
+  .contentContainer {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  .stepInfoBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 350px;
+  }
+
+  .detailsRow{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .actions{
+    margin-top: 40px;
+    display: flex;
+    gap: 16px;
+    align-self: center;
+  }
+}
