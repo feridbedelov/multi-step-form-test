@@ -98,8 +98,8 @@ describe('Confirmation', () => {
   });
 
   it('should render accountSecurityCode label and value', () => {
-    const row = within(screen.getByTestId('Security Code'));
-    expect(row.getByText('Security Code:')).toBeInTheDocument();
+    const row = within(screen.getByTestId('CVC'));
+    expect(row.getByText('CVC:')).toBeInTheDocument();
     expect(row.getByText(mockFormValues.accountSecurityCode)).toBeInTheDocument();
   });
 

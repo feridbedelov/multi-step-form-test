@@ -18,9 +18,10 @@ export function DeliveryAddressZipCodeInput() {
         required: { value: true, message: errorMessages.required },
         pattern: { value: zipCodeFormat, message: errorMessages.zipCode },
       }}
-      render={({ field: { onChange, value } }) => (
+      render={({ field: { onChange, value, name } }) => (
         <TextField
           value={value}
+          name={name}
           size="small"
           label="ZIP Code"
           onChange={onChange}

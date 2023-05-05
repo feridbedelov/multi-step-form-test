@@ -15,9 +15,10 @@ export function AccountHolderNameInput() {
       control={control}
       name="accountHolderName"
       rules={{ required: { value: true, message: errorMessages.required } }}
-      render={({ field: { onChange, value } }) => (
+      render={({ field: { onChange, value, name } }) => (
         <TextField
           value={value}
+          name={name}
           label="Account Holder Name"
           onChange={onChange}
           error={!!errors.accountHolderName}

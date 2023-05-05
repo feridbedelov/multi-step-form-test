@@ -18,12 +18,13 @@ export function PhoneNumberInput() {
         required: { value: true, message: errorMessages.required },
         pattern: { value: phoneNumberFormat, message: errorMessages.phoneNumber },
       }}
-      render={({ field: { onChange, value } }) => (
+      render={({ field: { onChange, value, name } }) => (
         <TextField
           label="Phone Number"
           variant="outlined"
           onChange={onChange}
           value={value}
+          name={name}
           error={!!errors.phoneNumber}
           {...(errors.phoneNumber && { helperText: String(errors.phoneNumber.message) })}
           size="small"

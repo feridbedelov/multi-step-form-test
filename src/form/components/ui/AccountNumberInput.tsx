@@ -18,9 +18,10 @@ export function AccountNumberInput() {
         required: { value: true, message: errorMessages.required },
         pattern: { value: accountNumberFormat, message: errorMessages.accountNumber },
       }}
-      render={({ field: { onChange, value } }) => (
+      render={({ field: { onChange, value, name } }) => (
         <TextField
           value={value}
+          name={name}
           label="Account Number"
           onChange={onChange}
           error={!!errors.accountNumber}

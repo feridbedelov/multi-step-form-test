@@ -18,10 +18,11 @@ export function EmailInput() {
         required: { value: true, message: errorMessages.required },
         pattern: { value: emailAddressFormat, message: errorMessages.email },
       }}
-      render={({ field: { onChange, value } }) => (
+      render={({ field: { onChange, value, name } }) => (
         <TextField
           label="Email"
           variant="outlined"
+          name={name}
           onChange={onChange}
           value={value}
           error={!!errors.email}

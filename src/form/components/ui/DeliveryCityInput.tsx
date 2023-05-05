@@ -15,12 +15,13 @@ export function DeliveryCityInput() {
       control={control}
       name="deliveredCity"
       rules={{ required: { value: true, message: errorMessages.required } }}
-      render={({ field: { onChange, value } }) => (
+      render={({ field: { onChange, value, name } }) => (
         <TextField
           value={value}
           size="small"
           label="City"
           onChange={onChange}
+          name={name}
           error={!!errors.deliveredCity}
           {...(errors.deliveredCity && { helperText: String(errors.deliveredCity.message) })}
         />

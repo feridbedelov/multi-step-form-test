@@ -15,11 +15,12 @@ export function LastNameInput() {
       control={control}
       name="lastName"
       rules={{ required: { value: true, message: errorMessages.required } }}
-      render={({ field: { onChange, value } }) => (
+      render={({ field: { onChange, value, name } }) => (
         <TextField
           label="Last Name"
           variant="outlined"
           onChange={onChange}
+          name={name}
           value={value}
           error={!!errors.lastName}
           {...(errors.lastName && { helperText: String(errors.lastName.message) })}

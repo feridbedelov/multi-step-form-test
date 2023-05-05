@@ -17,7 +17,7 @@ export function AccountExpirationDateInput() {
       rules={{
         required: { value: true, message: errorMessages.required },
       }}
-      render={({ field: { onChange, value } }) => (
+      render={({ field: { onChange, value, name } }) => (
         <DatePicker
           label="Expiration Date"
           value={value}
@@ -31,6 +31,7 @@ export function AccountExpirationDateInput() {
               }),
               size: 'small',
               error: !!errors.accountExpirationDate,
+              name,
             },
           }}
         />

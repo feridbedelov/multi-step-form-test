@@ -15,9 +15,10 @@ export function DeliveryAddressInput() {
       control={control}
       name="deliveryAddress"
       rules={{ required: { value: true, message: errorMessages.required } }}
-      render={({ field: { onChange, value } }) => (
+      render={({ field: { onChange, value, name } }) => (
         <TextField
           value={value}
+          name={name}
           size="small"
           label="Delivery Address"
           onChange={onChange}

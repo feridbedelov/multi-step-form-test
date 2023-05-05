@@ -15,9 +15,10 @@ export function FirstNameInput() {
       control={control}
       name="firstName"
       rules={{ required: { value: true, message: errorMessages.required } }}
-      render={({ field: { onChange, value } }) => (
+      render={({ field: { onChange, value, name } }) => (
         <TextField
           label="First Name"
+          name={name}
           variant="outlined"
           onChange={onChange}
           value={value}

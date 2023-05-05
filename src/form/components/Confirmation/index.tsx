@@ -61,7 +61,7 @@ export function Confirmation({ handlePrevStep }: Props) {
           {renderDetails('Account Holder', accountHolderName)}
           {renderDetails('Account Number', accountNumber)}
           {renderDetails('Expiration Date', dayjs(accountExpirationDate).format('MM/YYYY'))}
-          {renderDetails('Security Code', accountSecurityCode)}
+          {renderDetails('CVC', accountSecurityCode)}
         </div>
       </div>
 
